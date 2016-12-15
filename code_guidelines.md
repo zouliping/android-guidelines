@@ -12,7 +12,7 @@
 
 #### 成员变量
 
-成员变量使用小驼峰命名法。其中 private 和 protected 的成员变量以 m 开头，例如 mUserId。对于 View 变量的命名，以其对应 View 的缩写开头，例如 `tvUserName`，`btnLogin` 等。
+成员变量使用小驼峰命名法。其中 private 和 protected 的非静态成员变量以 m 开头，例如 mUserId。对于 View 变量的命名，以其对应 View 的缩写开头，例如 `tvUserName`，`btnLogin` 等。
 
 #### 常量
 
@@ -62,3 +62,31 @@ Color 以 color 开头，下划线后接颜色值的 16 进制，例如 `color_b
 
 注释使用 `/****/` 和 `//` 均可，尽可能在逻辑复杂的地方加上清晰明了的注释。
 
+### 空格的使用
+
+用 4 个空格缩进块。用 8 个空格换行，包括函数调用和赋值。例如，下面的这个例子是正确的：
+
+```
+Instrument i =
+        someLongExpression(that, wouldNotFit, on, one, line);
+```
+而下面这个例子就是错误的：
+
+```
+Instrument i =
+    someLongExpression(that, wouldNotFit, on, one, line);
+```
+
+### 大括号的使用
+
+左大括号与代码间隔一个空格，不需重起一行，右大括号可单独一行。此外，如果大括号间只有一行语句，也写上大括号，不要省略。例如：
+
+```
+private void init() {
+    hello()
+}
+```
+
+### 代码的长度
+
+一行代码不要过长，尽可能保持在 100 字符以内。一个方法也不要过长，尽可能保持在 50 行以内。
